@@ -33,22 +33,23 @@
 <%
 =end %>
 
+
 <% if @user.errors.any? %>
   <% @user.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
+    <li class="error-msg"><%= message %></li>
   <% end %>
 <% end %>
 
 <%= form_for(@user) do |f| %>
-  <%= f.label :username, "Your username here:" %>
-  <%= f.text_field :username, value: "user1" %>
+  <%= f.label :username, "Username:" %>
+  <%= f.text_field :username, value: "user1", class: "form-field"  %><br>
 
-  <%= f.label :email%>
-  <%= f.email_field :email, placeholder: "example@example.com" %>
+  <%= f.label :email, "Email:" %>
+  <%= f.email_field :email, placeholder: "example@example.com", class: "form-field" %><br>
 
-  <%= f.label :password%>
-  <%= f.password_field :password%>
+  <%= f.label :password, "Password:" %>
+  <%= f.password_field :password, class: "form-field" %><br>
 
-  <%= f.submit "Create User"%>
+  <%= f.submit "Create User", class:"submit"%>
 
 <% end %>
