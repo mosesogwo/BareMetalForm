@@ -1,24 +1,15 @@
-# README
+# RE-FORMER
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is part of the Odin Project - Ruby on Rails Course.
+It features building forms for a Rails Model, the Rails way.
 
-Things you may want to cover:
+## How to run Re-former
+To run it, clone this repository locally, and run these commands on your terminal.
 
-* Ruby version
+```
+cd ~/BareMetalForm
+rails server
+```
+Open a web browser and vist localhost http://localhost:3000/users/new to create a new user.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To edit an existing user, visit http://localhost:3000/users/id/edit, where id is the user_id of the user record you wish to edit.
